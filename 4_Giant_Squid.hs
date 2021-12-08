@@ -24,7 +24,7 @@ solve1 n bs t | null w = solve1 n bs (t+1)
           w = filter (won n') bs
 
 solve2 ns bs s (w,n,s') | s == length ns = sum (filter (`notElem` take s' ns) (concat w)) * n
-                     | otherwise      =
+                        | otherwise      =
   let
     ns' = take s ns
     ws = filter (won ns') bs

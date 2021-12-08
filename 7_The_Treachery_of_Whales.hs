@@ -1,6 +1,6 @@
 --- Day 7: The Treachery of Whales ---
 
-import Data.List
+import Data.List (minimum, maximum)
 
 main :: IO ()
 main = do
