@@ -27,6 +27,6 @@ solve2 m = product . take 3 . reverse . sort $ length . nub <$> [ basin m (r,c) 
 type Pos = (Int,Int)
 basin :: Matrix Int -> Pos -> [Pos]
 basin m p@(x,y) = [p] ++ vecinos ++ concatMap (basin m) vecinos
-    where vecinos = filter (isOneMore p) [(x-1,y),(x+1,y),(x,y-1),(x,y+1)]
-          isOneMore p1 p2 = mget p1 < mget p2 && mget p2 < 9
+    where vecinos = filter (isValid p) [(x-1,y),(x+1,y),(x,y-1),(x,y+1)]
+          isValid p1 p2 = mget p1 < mget p2 && mget p2 < 9
           mget (r,c) = fromMaybe 0 $ M.safeGet r c m
