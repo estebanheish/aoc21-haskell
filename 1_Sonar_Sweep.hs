@@ -10,6 +10,7 @@ main = do
 solve1 :: [Int] -> Int
 solve1 [x]                    = 0
 solve1 [x,xs]     | xs > x    = 1
+                  | otherwise = 0
 solve1 (x:xs:xss) | xs > x    = 1 + solve1 (xs:xss)
                   | otherwise = solve1 (xs:xss)
 
