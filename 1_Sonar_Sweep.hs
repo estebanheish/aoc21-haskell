@@ -15,5 +15,6 @@ solve1 (x:xs:xss) | xs > x    = 1 + solve1 (xs:xss)
 
 solve2 :: [Int] -> Int
 solve2 [x,y,z,w]    | (x+y+z) < (y+z+w) = 1
+                    | otherwise         = 0
 solve2 (x:y:z:w:ss) | (x+y+z) < (y+z+w) = 1 + solve2 (y:z:w:ss)
                     | otherwise         = 0 + solve2 (y:z:w:ss)
