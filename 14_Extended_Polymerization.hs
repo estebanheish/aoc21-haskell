@@ -29,4 +29,3 @@ merge p = [ (p', many p') | p' <- nub (fst <$> p) ]
 count p = [ (c, many c) | c <- nub (fst <$> p') ]
     where p' = concat $ (\([p,p'],n) -> [(p,n), (p',n)]) <$> p
           many y = sum $ snd <$> filter (\x -> fst x == y) p'
-
