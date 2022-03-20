@@ -2,7 +2,7 @@
 
 main :: IO ()
 main = do
-    n <- readFile "6_Lanternfish.input"
+    n <- readFile "input/06_Lanternfish.input"
     let n' = read $ "[" ++ concat (lines n) ++ "]" :: [Int]
         f x xs = length $ filter (x==) xs
     print $ solve 80 (f 0 n', f 1 n', f 2 n', f 3 n', f 4 n', f 5 n', f 6 n', f 7 n', f 8 n')  -- Part One: 350149

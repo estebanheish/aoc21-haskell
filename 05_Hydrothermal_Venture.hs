@@ -4,7 +4,7 @@ import Data.List (sort, group)
 
 main :: IO ()
 main = do
-    n <- readFile "5_Hydrothermal_Venture.input"
+    n <- readFile "input/05_Hydrothermal_Venture.input"
     let n1 = concatMap (build1 . parse . words) $ lines n
         n2 = concatMap (build2 . parse . words) $ lines n
     print $ length $ filter (>1) $ map length $ group $ sort n1 -- Part One: 5092

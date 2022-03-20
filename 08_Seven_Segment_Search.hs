@@ -5,7 +5,7 @@ import Data.Maybe (catMaybes, fromMaybe)
 
 main :: IO ()
 main = do
-    n <- lines <$> readFile "8_Seven_Segment_Search.input"
+    n <- lines <$> readFile "input/08_Seven_Segment_Search.input"
     let n' = map ((\(x,y) -> (sort <$> words x, sort <$> words (drop 1 y))) . span (/='|')) n
     print $ solve1 n' -- Part One: 261
     print $ solve2 n' -- Part Two: 987553

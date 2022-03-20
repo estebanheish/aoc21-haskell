@@ -5,7 +5,7 @@ import Data.Char (digitToInt)
 
 main :: IO ()
 main = do
-    n <- lines <$> readFile "3_Binary_Diagnostic.input"
+    n <- lines <$> readFile "input/03_Binary_Diagnostic.input"
     print $ solve1 n -- Part One: 1082324
     print $ solve2 n -- Part Two: 1353024
 

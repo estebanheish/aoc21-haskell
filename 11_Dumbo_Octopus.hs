@@ -7,7 +7,7 @@ import Data.Function
 
 main :: IO ()
 main = do
-  input <- fromLists . (map . map) digitToInt . lines <$> readFile "11_Dumbo_Octopus.input"
+  input <- fromLists . (map . map) digitToInt . lines <$> readFile "input/11_Dumbo_Octopus.input"
   print $ solve1 input 100 -- Part One: 1594
   print $ solve2 input 0   -- Part Two: 437
 

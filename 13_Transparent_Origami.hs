@@ -5,7 +5,7 @@ import Data.Char
 
 main :: IO ()
 main = do
-  input <- lines <$> readFile "13_Transparent_Origami.input"
+  input <- lines <$> readFile "input/13_Transparent_Origami.input"
   let p = (\x -> read ("(" ++ x ++ ")")) <$> takeWhile (/="") input :: [(Int,Int)]
       folds = toFold <$> drop 1 (dropWhile (/="") input)
       m = toMatrix p (maximum (snd <$> p)) (maximum (fst <$> p))

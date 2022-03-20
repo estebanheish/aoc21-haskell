@@ -6,7 +6,7 @@ import Data.Maybe
 
 main :: IO ()
 main = do
-  input <- map toCon . lines <$> readFile "12_Passage_Pathing.input"
+  input <- map toCon . lines <$> readFile "input/12_Passage_Pathing.input"
   print $ solve1 [["start"]] input -- 3410
   print $ solve2 [["start"]] input -- 98796
 

@@ -4,7 +4,7 @@ import Data.Char (isAlpha, isDigit)
 
 main :: IO ()
 main = do
-    n <- lines <$> readFile "2_Dive.input"
+    n <- lines <$> readFile "input/02_Dive.input"
     print $ solve1 n (0,0)   --- Part One: 2039256
     print $ solve2 n (0,0,0) --- Part Two: 1856459736
 

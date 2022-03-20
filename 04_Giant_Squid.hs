@@ -5,7 +5,7 @@ import Data.List.Split (splitOn)
 
 main :: IO ()
 main = do
-    input <- readFile "4_Giant_Squid.input"
+    input <- readFile "input/04_Giant_Squid.input"
     let l = lines input
         n = read <$> splitOn "," (concat (takeWhile (/= "") l)) :: [Int]
         bs = [ [ read <$> words y :: [Int] | y <- x ] | x <- buildBoards $ dropWhile (/= "") l ]

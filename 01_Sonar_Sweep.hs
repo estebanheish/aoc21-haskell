@@ -2,7 +2,7 @@
 
 main :: IO ()
 main = do
-    n <- readFile "1_Sonar_Sweep.input"
+    n <- readFile "input/01_Sonar_Sweep.input"
     let n' = read <$> lines n :: [Int]
     print $ solve1 n' --- Part One: 1665
     print $ solve2 n' --- Part Two: 1702

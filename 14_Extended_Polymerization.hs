@@ -1,11 +1,12 @@
 --- Day 14: Extended Polymerization ---
+
 import Data.List.Split (splitOn)
 import Data.List (nub, nubBy)
 import Data.Maybe (fromMaybe)
 
 main :: IO ()
 main = do
-  input <- lines <$> readFile "14_Extended_Polymerization.input"
+  input <- lines <$> readFile "input/14_Extended_Polymerization.input"
   let start = head $ takeWhile (/="") input
       rules = map ((\[x,y] -> (x,y)) . splitOn " -> ") . drop 1 $ dropWhile (/="") input
   print $ solve start rules 10 -- Part 1: 2447

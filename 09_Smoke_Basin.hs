@@ -7,7 +7,7 @@ import Data.List (nub, sort)
 
 main :: IO ()
 main = do
-  input <- M.fromLists . (map . map) digitToInt . lines <$> readFile "9_Smoke_Basin.input"
+  input <- M.fromLists . (map . map) digitToInt . lines <$> readFile "input/09_Smoke_Basin.input"
   print $ solve1 input -- Part One: 541
   print $ solve2 input -- Part Two: 847504
 

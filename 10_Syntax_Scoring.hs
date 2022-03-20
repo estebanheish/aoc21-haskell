@@ -5,7 +5,7 @@ import Data.List (sort)
 
 main :: IO ()
 main = do
-  input <- lines <$> readFile "10_Syntax_Scoring.input"
+  input <- lines <$> readFile "input/10_Syntax_Scoring.input"
   print $ solve1 input -- Part One: 271245
   print $ solve2 input -- Part Two: 1685293086
 
